@@ -20,7 +20,7 @@ class CustomTheme {
           900: Palette.red900,
         },
       ),
-      accentColor: Palette.red500,
+      // accentColor: Palette.red500,
       scaffoldBackgroundColor: Palette.nearBlack,
       textTheme: theme.textTheme.copyWith(
         button: theme.primaryTextTheme.button?.copyWith(
