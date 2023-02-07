@@ -53,7 +53,7 @@ class _GenreScreenState extends State<GenreScreen> {
               "Genre",
               style: Theme.of(context)
                   .textTheme
-                  .headline5
+                  .headlineSmall
                   ?.copyWith(color: Colors.white),
               textAlign: TextAlign.center,
             ),

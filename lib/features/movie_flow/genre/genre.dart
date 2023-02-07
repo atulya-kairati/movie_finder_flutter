@@ -17,6 +17,11 @@ class Genre {
   }
 
   @override
+  String toString() {
+    return "Genre[id: $id, name: $name, isSelected: $isSelected]";
+  }
+
+  @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_recommendation_app/features/movie_flow/result/result.dart';
 
 import '../../../core/constants.dart';
 import '../../../core/widgets/primary_button.dart';
@@ -6,11 +7,9 @@ import '../../../core/widgets/primary_button.dart';
 class YearsBackScreen extends StatefulWidget {
   const YearsBackScreen({
     super.key,
-    required this.nextPage,
     required this.previousPage,
   });
 
-  final VoidCallback nextPage;
   final VoidCallback previousPage;
 
   @override
@@ -69,7 +68,9 @@ class _YearsBackScreenState extends State<YearsBackScreen> {
               },
             ),
             const Spacer(),
-            PrimaryButton(onPressed: widget.nextPage, text: "Perfect"),
+            PrimaryButton(onPressed: (){
+              Navigator.of(context).push(ResultScreen.route());
+            }, text: "Perfect",),
             const SizedBox(height: kMediumSpacing),
           ],
         ),
