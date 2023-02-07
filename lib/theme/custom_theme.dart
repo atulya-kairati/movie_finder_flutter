@@ -22,19 +22,25 @@ class CustomTheme {
       ),
       // accentColor: Palette.red500,
       scaffoldBackgroundColor: Palette.nearBlack,
-      textTheme: theme.textTheme.copyWith(
-        button: theme.primaryTextTheme.button?.copyWith(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.bold, 
-        )
-      ).apply(
-        displayColor: Colors.white,
-      ),
+      textTheme: theme.textTheme
+          .copyWith(
+              labelLarge: theme.primaryTextTheme.labelLarge?.copyWith(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ))
+          .apply(
+            displayColor: Colors.white,
+          ),
       textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(
-          backgroundColor: Palette.red500
-        )
+          style: TextButton.styleFrom(backgroundColor: Palette.red500)),
+      sliderTheme: SliderThemeData(
+        activeTrackColor: Colors.white,
+        inactiveTrackColor: Colors.grey.shade800,
+        thumbColor: Colors.white,
+        valueIndicatorColor: Colors.redAccent,
+        activeTickMarkColor: Colors.transparent,
+        inactiveTickMarkColor: Colors.transparent,
       ),
     );
   }
